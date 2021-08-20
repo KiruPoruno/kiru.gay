@@ -1,3 +1,73 @@
+@import "variables.css";
+
 body {
 	font-family: monospace;
+}
+
+h1, h2 {
+	color: var(--primary);
+}
+
+h3, h4, h5, blockquote {
+	color: var(--secondary);
+}
+
+blockquote, pre {
+	font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, hr {
+	margin: 0px;
+	overflow: hidden;
+	position: relative;
+	padding: 10px 0 30px;
+
+	display: inline-block;
+	display: table;
+}
+
+h1::after, h2::after, h3::after {
+    left: 0px;
+	height: 1em;
+    bottom: 15px;
+    position: absolute;
+}
+
+h1::after {content: "========================================"}
+h2::after {content: "----------------------------------------"}
+
+h3, h4, h5 {font-size: 1.2em}
+h3::before {content: "### "}
+h4::before {content: "#### "}
+h5::before {content: "##### "}
+
+blockquote::after {content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>"}
+
+blockquote::after {
+	top: 0;
+	left: 0;
+	white-space: pre;
+	line-height: 20px;
+	position: absolute;
+}
+blockquote {
+	margin: 0px;
+	overflow: hidden;
+	padding-top: 2px;
+	padding-left: 2em;
+	position: relative;
+	padding-left: 15px;
+}
+
+pre {
+	border-radius: 10px;
+	color: var(--elem-fg);
+	padding: var(--padding);
+	background-color: var(--elem-bg);
+}
+
+main {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 700px;
 }

@@ -1,0 +1,13 @@
+:root {
+	--bg: #FFFFFF;
+	--fg: #000000;
+
+	--primary: #ECAFDA;
+	--secondary: #B29C80;
+	--inactive: #E2DBED;
+
+	--elem-bg: #000000;
+	--elem-fg: #FFFFFF;
+
+	--padding: 10px;
+}
