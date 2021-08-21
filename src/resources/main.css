@@ -8,12 +8,13 @@ h1, h2 {
 	color: var(--primary);
 }
 
-h3, h4, h5, blockquote {
+h3, h4, h5, blockquote, a, a:visited {
 	color: var(--secondary);
 }
 
 blockquote, pre {
 	font-weight: 600;
+	padding: var(--padding) 0px;
 }
 
 h1, h2, h3, h4, h5, hr {
@@ -50,6 +51,7 @@ blockquote::after {
 	line-height: 20px;
 	position: absolute;
 }
+
 blockquote {
 	margin: 0px;
 	overflow: hidden;
@@ -59,12 +61,34 @@ blockquote {
 	padding-left: 15px;
 }
 
+hr::after {
+	line-height: 0px;
+	content: "----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+}
+
+hr {
+	width: 100%;
+	border: none;
+}
+
 pre {
 	border-radius: 10px;
 	color: var(--elem-fg);
 	padding: var(--padding);
 	background-color: var(--elem-bg);
 }
+
+li {counter-increment: li}
+ul, ol {
+	list-style: none;
+	counter-reset: li;
+	padding-left: 1.2em;
+}
+
+li::before {color: var(--secondary)}
+
+ul li::before {content: "- "}
+ol li::before {content: counter(li) ". "}
 
 main {
 	width: 100%;
