@@ -38,3 +38,9 @@ This is a [test link](#) btw
 3.  Test 3
 4.  Test 4
 5.  Test 5
+
+| Example    | Markdown        | Table   |
+| ---------- | --------------: | ------: |
+| uwu 1      | awooooo?        | weewoo  |
+| uwu 2      | awooooo?        | woowee  |
+| uwu 3      | awooooo?        | weewoo  |

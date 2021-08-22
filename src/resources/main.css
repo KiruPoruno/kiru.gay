@@ -95,6 +95,15 @@ li::before {color: var(--secondary)}
 ul li::before {content: "- "}
 ol li::before {content: counter(li) ". "}
 
+table {
+	width: 100%;
+	border-radius: 10px;
+	color: var(--elem-fg);
+	background-color: var(--elem-bg);
+}
+
+tr, th, td {padding: var(--padding)}
+
 main {
 	width: 100%;
 	margin: 0 auto;
