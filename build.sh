@@ -1,9 +1,27 @@
 #!/bin/sh
 
-rm -rf build/*
+rm -rf build/* tmp/*
 mkdir build/blog -p
 
-cp src/*.html build
+for i in src/*.md; do
+	FILE="$(echo $i | sed 's/\..*//g' | xargs basename)"
+cat <<EOF > build/$FILE.html
+<html>
+	<head>
+		<title>Kiru</title>
+		%%header.html%%
+	</head>
+	<body>
+		<main>
+			%%navbar.html%%
+			$(cat $i | pandoc)
+			%%footer.html%%
+		</main>
+	</body>
+</html>
+EOF
+done
+
 
 for i in $(ls $PWD/build/*.html); do
 	grep -oE %%.*.%% "$i" | while read ii; do
