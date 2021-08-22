@@ -1,6 +1,7 @@
 @import "variables.css";
 
 body {
+	margin: var(--padding);
 	font-family: monospace;
 }
 
@@ -48,7 +49,7 @@ blockquote::after {
 	top: 0;
 	left: 0;
 	white-space: pre;
-	line-height: 20px;
+	line-height: 1.8em;
 	position: absolute;
 }
 
@@ -60,6 +61,8 @@ blockquote {
 	position: relative;
 	padding-left: 15px;
 }
+
+blockquote p {margin: 0px}
 
 hr::after {
 	line-height: 0px;
