@@ -75,6 +75,7 @@ hr {
 	width: 100%;
 	border: none;
 }
+.footnotes hr {display: none}
 
 pre {
 	border-radius: 10px;

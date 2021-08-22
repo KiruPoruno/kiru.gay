@@ -36,7 +36,7 @@ This is a [test link](#) btw
 1.  Test 1
 2.  Test 2
 3.  Test 3
-4.  Test 4
+4.  Test 4[^1]
 5.  Test 5
 
 | Example    | Markdown        | Table   |
@@ -44,3 +44,5 @@ This is a [test link](#) btw
 | uwu 1      | awooooo?        | weewoo  |
 | uwu 2      | awooooo?        | woowee  |
 | uwu 3      | awooooo?        | weewoo  |
+
+[^1]: This is the footnote.
