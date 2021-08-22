@@ -11,3 +11,13 @@
 
 	--padding: 10px;
 }
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #242426 !important;
+		--fg: #EEEEEE !important;
+
+		--elem-bg: #42444C;
+		--elem-fg: #CCCCCC;
+	}
+}

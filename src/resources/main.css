@@ -1,8 +1,10 @@
 @import "variables.css";
 
 body {
+	color: var(--fg);
 	margin: var(--padding);
 	font-family: monospace;
+	background-color: var(--bg);
 }
 
 h1, h2 {
