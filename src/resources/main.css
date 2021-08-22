@@ -96,6 +96,15 @@ li::before {color: var(--secondary)}
 ul li::before {content: "- "}
 ol li::before {content: counter(li) ". "}
 
+input[type="checkbox"] {
+	width: 2em;
+	appearance: none;
+	color: var(--secondary);
+}
+
+input[type="checkbox"]::before {content: "[ ]"}
+input[type="checkbox"]:checked::before {content: "[X]"}
+
 table {
 	width: 100%;
 	border-radius: 10px;

@@ -39,6 +39,9 @@ This is a [test link](#) btw
 4.  Test 4[^1]
 5.  Test 5
 
+ - [ ] Test 1
+ - [X] Test 2
+
 | Example    | Markdown        | Table   |
 | ---------- | --------------: | ------: |
 | uwu 1      | awooooo?        | weewoo  |
