@@ -1,51 +1,37 @@
-Header 1
-========
+Kiru
+====
 
-Header 2
+### **Full Stack Engineer, proficient in wasting time**
+
+Skills
+------
+
+I've overall been doing programming and been interested in tech my
+entire life, started programming in the midst of 3rd grade, so around
+2012-13 I believe. I've stopped being able to keep track.
+
+I've always liked how web development works, and so I've stayed pretty
+true to it and much prefer working in it in most cases.
+
+ - JavaScript, NodeJS, Electron and any web development
+   - Been at this specifically for just over 5-6 years now.
+ - Shell scripting (Bash, Bourne Shell/POSIX)
+ - Some low level languages (C and Go)
+ - Python
+
+Projects
 --------
 
-### Header 3
+I am overall very bad at finishing projects so I don't have much to put
+onto here, however I do still have something!
 
-#### Header 4
+ - [Kitty](https://github.com/keysmash-studios/kitty) | A tiny web server
 
-##### Header 5
+Quick Links
+-----------
 
-This is some test text with some **formatting**, just to test out _things!!_
+ - [Email (mail@kiru.gay)](https://github.com/KiruPoruno)
+ - [GitHub (\@KiruPoruno)](https://github.com/KiruPoruno)
+ - [LiberaPay (\@KiruPoruno)](https://github.com/KiruPoruno)
+ - [Mastodon (\@KiruPoruno@tech.lgbt)](https://tech.lgbt/@KiruPoruno)
 
-[test](test.html)
-
-```
-let bar = "foo";
-
-function foo() {
-	console.log("foobar")
-}
-```
-
-> this is a test
-> as
-
-This is a [test link](#) btw
-
-*   Test 1
-*   Test 2
-*   Test 3
-*   Test 4
-*   Test 5
-
-1.  Test 1
-2.  Test 2
-3.  Test 3
-4.  Test 4[^1]
-5.  Test 5
-
- - [ ] Test 1
- - [X] Test 2
-
-| Example    | Markdown        | Table   |
-| ---------- | --------------: | ------: |
-| uwu 1      | awooooo?        | weewoo  |
-| uwu 2      | awooooo?        | woowee  |
-| uwu 3      | awooooo?        | weewoo  |
-
-[^1]: This is the footnote.
