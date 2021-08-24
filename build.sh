@@ -27,7 +27,12 @@ for i in $(ls $PWD/build/*.html); do
 	grep -oE %%.*.%% "$i" | while read ii; do
 		REPLACE="$(echo $ii | sed -e 's/\%/\\\%/g' -e 's/\//\\\//g')"
 		FILE="$(echo $ii | sed 's/\%//g')"
-		sed -e "/$REPLACE/{r src/resources/$FILE" -e 'd}' -i "$i"
+		[ -f "src/resources/$FILE" ] && {
+			sed -e "/$REPLACE/{r src/resources/$FILE" -e 'd}' -i "$i"
+		}
+		[ -f "build/tmp/$FILE" ] && {
+			sed -e "/$REPLACE/{r build/tmp/$FILE" -e 'd}' -i "$i"
+		}
 	done
 done
 
