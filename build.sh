@@ -1,11 +1,10 @@
 #!/bin/sh
 
-rm -rf build/* tmp/*
-mkdir build/blog -p
+rm -rf build/*
+mkdir build/blog build/tmp 
 
-for i in src/*.md; do
-	FILE="$(echo $i | sed 's/\..*//g' | xargs basename)"
-cat <<EOF > build/$FILE.html
+write() {
+cat <<EOF > build/$2/$(echo $i | sed 's/\..*//g' | xargs basename).html
 <html>
 	<head>
 		<title>Kiru</title>
@@ -14,16 +13,27 @@ cat <<EOF > build/$FILE.html
 	<body>
 		<main>
 			%%navbar.html%%
-			$(cat $i | pandoc)
+			$(cat $1 | pandoc)
 			%%footer.html%%
 		</main>
 	</body>
 </html>
 EOF
+}
+
+for i in src/*.md; do
+	write $i
 done
 
+for i in src/posts/*.md; do
+	write $i "blog"
+done
 
-for i in $(ls $PWD/build/*.html); do
+for i in $(ls -tu build/blog); do
+	echo "<a href="blog/$i">$i</a>" >> build/tmp/entries.html
+done
+
+for i in $(ls $PWD/build/*.html $PWD/build/blog/*.html); do
 	grep -oE %%.*.%% "$i" | while read ii; do
 		REPLACE="$(echo $ii | sed -e 's/\%/\\\%/g' -e 's/\//\\\//g')"
 		FILE="$(echo $ii | sed 's/\%//g')"
@@ -36,4 +46,5 @@ for i in $(ls $PWD/build/*.html); do
 	done
 done
 
+rm build/tmp -rf
 cp src/resources/* build
