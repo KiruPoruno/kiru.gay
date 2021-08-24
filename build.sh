@@ -21,14 +21,8 @@ cat <<EOF > build/$2/$(echo $i | sed 's/\..*//g' | xargs basename).html
 EOF
 }
 
-for i in src/*.md; do
-	write $i
-done
-
-for i in src/posts/*.md; do
-	write $i "blog"
-done
-
+for i in src/*.md; do write $i;done
+for i in src/posts/*.md; do	write $i "blog";done
 for i in $(ls -tu build/blog); do
 	echo "<a href="blog/$i">$i</a>" >> build/tmp/entries.html
 done
