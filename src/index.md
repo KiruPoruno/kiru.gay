@@ -28,8 +28,8 @@ onto here, however I do still have something!
 Quick Links
 -----------
 
- - [Email (mail@kiru.gay)](https://github.com/KiruPoruno)
+ - [Email (mail@kiru.gay)](mailto:mail@kiru.gay)
  - [GitHub (\@KiruPoruno)](https://github.com/KiruPoruno)
- - [LiberaPay (\@KiruPoruno)](https://github.com/KiruPoruno)
+ - [LiberaPay (\@KiruPoruno)](https://liberapay.com/KiruPoruno)
  - [Mastodon (\@KiruPoruno@tech.lgbt)](https://tech.lgbt/@KiruPoruno)
 
