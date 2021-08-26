@@ -40,5 +40,13 @@ for i in $(ls $PWD/build/*.html $PWD/build/blog/*.html); do
 	done
 done
 
+for i in $(ls $PWD/build/*.html $PWD/build/blog/*.html); do
+	grep -oE "\|\|\|.*.\|\|\|" "$i" | while read ii; do
+		REPLACE="$(echo $ii)"
+		COMMAND="$(echo $ii | sed 's/|||//g')"
+		sed "s#$REPLACE#$(eval $COMMAND | sed -e 's/\#/\\#/g')#g" -i "$i"
+	done
+done
+
 rm build/tmp -rf
 cp src/resources/* build
