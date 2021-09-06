@@ -118,8 +118,13 @@ table {
 
 tr, th, td {padding: var(--padding)}
 
+img {
+	max-width: 72ch;
+}
+
 main {
 	width: 100%;
 	margin: 0 auto;
 	max-width: 72ch;
+	overflow: hidden;
 }
