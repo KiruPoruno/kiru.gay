@@ -32,8 +32,9 @@ h1, h2, h3, h4, h5, hr {
 
 h1::after, h2::after, h3::after {
     left: 0px;
-	height: 1em;
+	height: 1ch;
     bottom: 15px;
+	overflow: hidden;
     position: absolute;
 }
 
@@ -50,6 +51,7 @@ blockquote::after {content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A
 blockquote::after {
 	top: 0;
 	left: 0;
+	overflow: hidden;
 	white-space: pre;
 	line-height: 1.8em;
 	position: absolute;
@@ -67,6 +69,7 @@ blockquote {
 blockquote p {margin: 0px}
 
 hr::after {
+	overflow: hidden;
 	line-height: 0px;
 	content: "------------------------------------------------------------------------";
 }
@@ -74,6 +77,7 @@ hr::after {
 hr {
 	width: 100%;
 	border: none;
+	line-height: 0px;
 }
 .footnotes hr {display: none}
 
