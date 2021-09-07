@@ -1,2 +1,2 @@
 run:
-	@./build.sh
+	@TITLE="Kiru" ./build.sh
