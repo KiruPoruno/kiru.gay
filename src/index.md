@@ -24,6 +24,7 @@ I am overall very bad at finishing projects so I don't have much to put
 onto here, however I do still have something!
 
  - [Kitty](https://github.com/keysmash-studios/kitty) | A tiny web server
+ - [ksg](https://github.com/KiruPoruno/kiru.gay) | The site generator used for this site
 
 Quick Links
 -----------
