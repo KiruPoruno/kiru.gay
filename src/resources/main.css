@@ -82,10 +82,17 @@ hr {
 .footnotes hr {display: none}
 
 pre {
-	border-radius: 10px;
 	color: var(--elem-fg);
 	padding: var(--padding);
+	border-radius: var(--radius);
 	background-color: var(--elem-bg);
+}
+
+code {
+	padding: 2px 5px;
+	color: var(--elem-fg);
+	background: var(--elem-bg);
+	border-radius: calc(var(--radius) / 2);
 }
 
 li {counter-increment: li}
