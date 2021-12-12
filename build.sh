@@ -10,7 +10,8 @@ rm -rf "$DEST"/*
 mkdir "$DEST"/blog "$DEST"/tmp -p
 
 write() {
-cat <<EOF > "$DEST"/$2/$(echo $i | sed 's/\..*//g' | xargs basename).html
+	FILE="$DEST/$2/$(echo "$i" | sed -e 's/\..*//g' -e 's/ /-/g' | tr "[:upper:]" "[:lower:]" | xargs basename).html"
+cat <<EOF > "$FILE"
 <html>
 	<head>
 		<title>$TITLE</title>
@@ -19,24 +20,27 @@ cat <<EOF > "$DEST"/$2/$(echo $i | sed 's/\..*//g' | xargs basename).html
 	<body>
 		<main>
 			%%navbar.html%%
-			$(cat $1 | pandoc)
+			$(cat "$1" | pandoc)
 			%%footer.html%%
 		</main>
 	</body>
 </html>
 EOF
+
+	touch -d "$(date -Rr "$i")" "$FILE"
 }
 
-for i in "$SITE"/*.md; do write $i;done
-for i in "$SITE"/posts/*.md; do	write $i "blog";done
-for i in $(ls -tu "$DEST"/blog); do
-	echo "<a href="blog/$i">$i</a>" >> "$DEST"/tmp/entries.html
+for i in "$SITE"/*.md; do write "$i";done
+for i in "$SITE"/posts/*.md; do	write "$i" "blog";done
+ls -tu "$SITE"/posts | grep -E '*.md' | while read i; do
+	LINK="$(echo $i | tr "[:upper:]" "[:lower:]" | sed -e 's/ /-/g' -e 's/.md/.html/g')"
+	echo "<br><div><a href="blog/$LINK">${i%.*}</a><br>Last modified: $(date -r "$SITE/posts/$i" +%Y-%m-%d\ -\ %I:%M:%S)</div>" >> "$DEST"/tmp/entries.html
 done
 
 for i in $(ls $PWD/"$DEST"/*.html $PWD/"$DEST"/blog/*.html); do
 	grep -oE %%.*.%% "$i" | while read ii; do
 		REPLACE="$(echo $ii | sed -e 's/\%/\\\%/g' -e 's/\//\\\//g')"
-		FILE="$(echo $ii | sed 's/\%//g')"
+		FILE="$(echo $ii | sed -e 's/\%//g' -e 's/ /-/g' | tr '[:upper:]' '[:lower:]')"
 		[ -f "$SITE/resources/$FILE" ] && {
 			sed -e "/$REPLACE/{r $SITE/resources/$FILE" -e 'd}' -i "$i"
 		}
