@@ -35,6 +35,25 @@ required, as they're imported when the Markdown gets translated to HTML.
 You can also import the output of a command with `||<command>||` aka
 `||date||` will turn into the output of the `date` command.
 
+### Blogging
+
+Currently you can't just disable blog posts, so if you don't want it
+just don't have it in your footer or header, but blog.html will always
+be created.
+
+As far how the posts work, you simply add a Markdown file (.md) in
+`src/posts` it'll then be auto converted and placed in `build/blog`, as
+for how to name them, they support upper case characters, and the links
+will be auto converted to lowercase so that the links don't look stupid,
+you can also use spaces, it'll convert that to -'s, and to sort them
+properly add a number in the file name. Example below:
+
+```sh
+1 A long title.md # this will come out as "a-long-title.html"
+2 An even longer title.md # this will be put above the previous one
+0 A short title.md # this will be put first
+```
+
 ### Settings
 
 `ksg` also supports a few settings. Such as changing the destination
