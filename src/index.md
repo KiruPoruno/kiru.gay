@@ -21,11 +21,13 @@ Projects
 --------
 
 I am overall very bad at finishing projects so I don't have much to put
-onto here, however I do still have something!
+onto here, however I do still have something! All my projects are
+licensed under GPLv3, so feel free to look and edit the code.
 
- - [Kitty](https://github.com/keysmash-studios/kitty) | A tiny web server
- - [Typer](https://typer.kiru.gay) | A minimal and tiny typing test
+ - [kitty](https://github.com/keysmash-studios/kitty) | A tiny web server
+ - [node-mitto](https://github.com/KiruPoruno/node-mitto) | A tiny notification server
  - [ksg](https://github.com/KiruPoruno/kiru.gay) | The site generator used for this site
+ - [typer](https://typer.kiru.gay) | A very minimal online typing speed test
 
 Quick Links
 -----------
