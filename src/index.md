@@ -12,7 +12,7 @@ And I've had an interest in those fields for a very very long time now.
 I've always liked how web development works, and so I've stayed pretty
 true to it and much prefer working in it in most cases.
 
- - Python and other higher level languages
+ - Some other higher level languages
  - Some low level languages (C, Go and more)
  - Shell scripting (Bash, Bourne Shell/POSIX)
  - JavaScript, NodeJS, Electron and any web development
@@ -35,5 +35,5 @@ Quick Links
  - [Email (mail@kiru.gay)](mailto:mail@kiru.gay)
  - [GitHub (\@KiruPoruno)](https://github.com/KiruPoruno)
  - [LiberaPay (\@KiruPoruno)](https://liberapay.com/KiruPoruno)
- - [Mastodon (\@KiruPoruno@tech.lgbt)](https://tech.lgbt/@KiruPoruno)
+ - <a href="https://tech.lgbt/@KiruPoruno" rel="me">Mastodon (\@KiruPoruno@tech.lgbt)</a>
 
